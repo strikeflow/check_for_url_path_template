@@ -72,7 +72,7 @@ def build_request() -> requests.sessions.Session:
 
 
 def manage_queue():
-    """Manages the queue and calls the get_customer_messages() function"""
+    """Manages the queue and calls the do_scan() function"""
     while True:
         current_url = url_queue.get()
         do_scan(current_url)
